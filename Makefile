@@ -5,7 +5,7 @@ COVERAGE_FLAGS = --coverage
 CFLAGS = $(BASE_FLAGS) $(SANITIZE_FLAGS) $(COVERAGE_FLAGS)
 LDFLAGS = -lcunit
 
-SRC = Menus.c Print.c
+SRC = Menus.c Print.c Logica.c
 OBJ = $(SRC:.c=.o)
 MAIN_OBJ = Main.o $(OBJ)
 
