@@ -16,6 +16,7 @@ typedef struct infoJogo {
     int TurnoX;
     int ModoJogo;
     int L, C;
+    char TurnoAI;
 } INFOJOGO, *InfoJogo;
 
 
@@ -60,6 +61,9 @@ void imprimeMenuFimJogo (InfoJogo I, char c);
 
 // Logica.c
 
+// Determina o turno oposto - Determines the opposing turn
+char turnoOposto (char c);
+
 // Inicializa a informação do jogo - Inicializes the information of the game
 InfoJogo inicializaJogo (int ModoJogo);
 
@@ -77,3 +81,36 @@ int vitoria (char Tabuleiro [3][3], char c);
 
 // Verifica se o tabuleiro está completamente preenchido - Checks if the board is completly filled
 int tabuleiroPreenchido (char Tabuleiro [3][3]);
+
+// Procura uma jogada que leva à vitória - Looks for a play that leads to a win
+int jogadaVitoria (InfoJogo I);
+
+// Procura uma jogada que previne a derrota - Looks for a play that prevents defeat
+int jogadaAntiDerrota (InfoJogo I);
+
+// Procura um fork - Looks for a fork
+int jogadaFork (InfoJogo I);
+
+// Verifica se uma jogada leva a um fork - Checks if a play leads to a fork
+int verificaFork (InfoJogo I);
+
+// Procura uma jogada nos cantos ou no meio - Looks for a play in the corners or the middle
+int jogadaEficiente (InfoJogo I);
+
+// Função auxiliar à 'jogadaEficiente' - Auxiliar function of 'jogadaEficiente'
+int jogadaEficienteAux (char *c, char TurnoAI);
+
+
+
+
+
+// AI.c
+
+// Realiza a jogada do computador fácil - Makes the play of the easy computer
+void computadorFacil (InfoJogo I);
+
+// Realiza a jogada do computador médio - Makes the play of the medium computer
+void computadorMedio (InfoJogo I);
+
+// Realiza a jogada do computador difícil - Make the play of the hard computer
+void computadorDificil (InfoJogo I);

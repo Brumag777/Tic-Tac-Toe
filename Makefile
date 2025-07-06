@@ -5,7 +5,7 @@ COVERAGE_FLAGS = --coverage
 CFLAGS = $(BASE_FLAGS) $(SANITIZE_FLAGS) $(COVERAGE_FLAGS)
 LDFLAGS = -lcunit
 
-SRC = Menus.c Print.c Logica.c
+SRC = Menus.c Print.c Logica.c AI.c
 OBJ = $(SRC:.c=.o)
 MAIN_OBJ = Main.o $(OBJ)
 
@@ -18,5 +18,4 @@ TicTacToe: $(MAIN_OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f Jogo Testes *.o *.gcov *.gcda *.gcno \
-					  AI/*.o AI/*.gcov AI/*.gcda AI/*.gcno
+	rm -f Jogo Testes *.o *.gcov *.gcda *.gcno
