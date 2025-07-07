@@ -38,3 +38,9 @@ To run the game, use the following command in the terminal (inside the executabl
 
 ```bash
 ./TicTacToe
+```
+
+# Imagens / Images
+
+![image](https://github.com/user-attachments/assets/3c4ad83c-eeec-4791-8149-963808630b2f)
+![image](https://github.com/user-attachments/assets/996c0582-fa21-4fb2-8186-abf679cf44ff)
